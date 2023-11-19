@@ -9,8 +9,8 @@ import { Divider } from "@/lib/components/ui/Divider";
 import Field from "@/lib/components/ui/Field";
 import PageHeading from "@/lib/components/ui/PageHeading";
 
-import { GoogleLoginButton } from "./components/GoogleLogin";
 import { MagicLinkLogin } from "./components/MagicLinkLogin";
+import { FacebookLoginButton, GithubLoginButton, GoogleLoginButton, TwitterLoginButton} from "./components/OauthLogin";
 import { PasswordForgotten } from "./components/PasswordForgotten";
 import { useLogin } from "./hooks/useLogin";
 
@@ -66,8 +66,11 @@ const Main = (): JSX.Element => {
             </div>
 
             <Divider text={t("or")} />
-            <div className="flex flex-col items-center justify-center mt-2 gap-2">
+            <div className="flex flex-row items-center justify-center mt-2 gap-8">
               <GoogleLoginButton />
+              <TwitterLoginButton />
+              <FacebookLoginButton />
+              <GithubLoginButton />
             </div>
             <Divider text={t("or")} />
             <MagicLinkLogin email={email} setEmail={setEmail} />

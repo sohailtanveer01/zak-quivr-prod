@@ -19,4 +19,6 @@ export const GoogleLoginButton = (): JSX.Element => {
       {t("googleLogin", { ns: "login" })}
     </Button>
   );
+
+  
 };
